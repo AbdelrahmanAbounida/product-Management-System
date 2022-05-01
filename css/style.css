@@ -1,0 +1,251 @@
+
+
+
+
+:root{
+    --color-orange: #ff4e00;
+    --color-orng2: #f5510b;
+    --color-hover: rgb(231, 214, 190);
+    --color-dark: rgb(37, 39, 43);
+    --color-black:rgb(22, 24, 27);
+    --color-light_dark: rgb(56, 57, 61);
+    --container-width-lg: 80%;
+}   
+
+
+body{
+    background-color: var(--color-black);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+   
+}
+
+header{
+    text-align: center;  
+    color: white;
+}
+
+header h1{
+    font-size: 40px;   
+    text-transform: capitalize;
+}
+header > p{
+    font-size: 20px;
+}
+header > p > span{
+    color: var(--color-orange);
+}
+
+a{
+    text-decoration: none;
+    font-size: larger;
+    color: var(--color-hover);
+    display: inline-block;
+    padding: 0.7rem 0rem; 
+    margin: 0 1rem;
+    border: 1px solid transparent;
+    background-color: var(--color-orng2);
+    transition: all 500ms ease;
+    border-radius: 30px;
+    width: 100%;
+}
+
+div > a:hover{
+    color: white;
+    letter-spacing: 1.5px;
+    background-color: var(--color-orange);
+}
+.btn{
+    text-align: center;   
+    margin: 2rem auto;
+    
+    width: 100%;
+    display: flex;
+}
+
+input{
+    text-decoration: none;
+    margin: 2rem auto;
+    padding: 7px 1px;
+    transition: all 300ms ease;
+    color: whitesmoke;
+    background-color: var(--color-dark);
+    border: 1px solid orange;
+    
+    width: 100%; 
+    border-radius: 30px;   
+    height: 23px;
+}
+input:hover{
+    background-color: var(--color-light_dark);
+    color: white;
+}
+input:focus{
+    background-color: black;
+    transform: scale(1.05);
+
+}
+
+.inpt{
+    display: flex;    
+    gap:20px;
+}
+
+.inpt2{
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+.total{
+    margin:auto;
+    padding-left: 10px;
+    border-radius: 30px; 
+    color: white;
+    background-color: red;
+    height: 20px;
+}
+.total {
+    padding-left: 15px;
+    max-height: 20px;  
+    padding: 1.5vh 0.4vh; 
+}
+
+
+
+
+
+/*  tr:nth-child(even){background-color: #7c2d2d}*/
+
+.first-row{
+    align-items: center;
+    border-radius: 3rem;
+    background-color: #006400;
+}
+
+
+
+table {
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    color: white;
+    text-align: center;
+    padding: 8px;
+  }
+  
+ /*tr:nth-child(even){background-color: #f2f2f2}*/
+  
+.btnt{
+    color: rgb(179, 171, 171);
+    background-color: #1c3629;
+    margin: 5px 1px;
+    padding: 0.3rem 0rem;
+}
+.btnt:hover{
+    letter-spacing: 0px;
+    cursor: pointer;
+    color: white;
+    
+}
+
+.btn-del:hover{
+    background-color: #e61616;
+}
+.btn-up:hover{
+    background-color: #174c8a;
+}
+
+
+/* Dialog */
+.swal-overlay {
+    background-color: var(--color-dark);
+  }
+  .swal-modal {
+    
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+
+   
+  }
+  .swal-button {
+    padding: 15px 35px;
+    border-radius: 1px;
+    font-size: 17px;
+    border: 1px solid #1c3629;
+    align-items: center;
+    color: white;
+    background-color: #e64d0b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 2px #999;
+
+  }
+  .swal-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .swal-button:hover{
+    background-color: var(--color-orange) !important;
+  }
+  .swal-title{
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+  }
+  .swal-text {
+    font-size: 20px;
+    padding: 17px;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: #000;
+  }
+
+
+@media(max-width: 950px){
+
+    header, .container{
+        min-width: 1000px;
+    }
+}
+
+
+@media(max-width: 1080px){
+    .inpt2{
+        display: flex;
+        flex-direction: column;
+    }
+    .price{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 1300px){
+
+.total{
+    margin: auto 1vh ; 
+    height: 23px; 
+}
+
+}
+
+@media(min-width: 1000px){
+
+    .total{
+        margin: auto 1vh ; 
+        height: 33px; 
+    }
+}

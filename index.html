@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMS</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <h1> Data  Management  System</h1>
+        <p>
+            <span>Made by: </span> Abdelrahman Abounida
+        </p>
+    </header>
+      
+      <section>
+
+
+    <section class="inputs container">
+        <form>
+            <div class="inpt-title">
+                <input type="text" placeholder="  title" id="title">
+            </div>
+
+            <div class="inpt2 inpt-data">
+                <div class="inpt price">
+                    <input onchange="getTotal()" type="number" placeholder="  price" id="price" min="0">
+                    <input onchange="getTotal()" type="number" placeholder="  taxes" id="taxes" min="0">
+                    <input onchange="getTotal()" type="number" placeholder="  ads" id="ads" min="0">
+                    <input onchange="getTotal()" type="number" placeholder="  discount" id="discount" min="0">
+                </div>
+                <div class="total">&nbsp; Total:&nbsp;<span id="tot"></span></div>
+            </div>
+
+            <div class="inpt inpt-count">
+                <input type="number" placeholder="  count" id="count">
+            </div>
+
+            <div class="inpt npt-category">
+                <input type="text" placeholder="  category" id="category">
+            </div>
+
+            <div class="btn btn-create">
+                <a class="create-btn" href="#" id="create">Create</a>
+            </div>
+
+            <div class="inpt inpt-search">
+                <input type="text" placeholder="  search" name="search" id="search">
+            </div>
+
+            <div class="btn btn-search">
+                <a class="search-title-btn" onclick="searchItem(this.id)" href="##" id="search-title-btn">Search By Title</a>
+                <a class="search-cat-btn" onclick="searchItem(this.id)" href="##" id="search-cat-btn">Search By Category</a>
+            </div>
+            
+
+            <div class="btn btn-delete">
+                <a class="delete-btn" href="#" id="delete">Delete All</a>
+            </div>
+
+        </form>
+
+    </section>
+
+   
+    <section class="container">
+        <table>
+            <tr class="first-row">
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>TAXES</th>
+                <th>ADS</th>
+                <th>DISCOUNT</th>
+                <th>TOTAL</th>
+                <th>CATEGORY</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+
+            <tbody id="tbd">
+
+    
+            </tbody>
+        </table>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
